@@ -1,0 +1,52 @@
+<!-- giscus -->
+{{- if .Site.Params.giscus.repo}}
+<script src="https://giscus.app/client.js"
+        data-repo="{{ .Site.Params.giscus.repo }}"
+        data-repo-id="{{ .Site.Params.giscus.repoId }}"
+        data-category="{{ .Site.Params.giscus.category }}"
+        data-category-id="{{ .Site.Params.giscus.categoryId }}"
+        data-mapping="{{ .Site.Params.giscus.mapping }}"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="{{ .Site.Params.giscus.inputPosition }}"
+        data-theme="{{ .Site.Params.giscus.theme }}"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<style>
+    iframe.giscus-frame {
+        background-color: transparent;
+    }
+</style>
+<script>
+    function sendMessage(message) {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({giscus: message}, 'https://giscus.app');
+    }
+
+    function changeTheme(theme) {
+        sendMessage({
+            setConfig: {
+                theme
+            }
+        });
+    }
+
+    document.onreadystatechange = () => {
+        if (document.readyState === "complete") {
+            // 1. try immediately when single page ready
+            if (!document.getElementById("darkTheme").disabled) {
+                changeTheme("dark");
+            }
+            // 2. exchange when click "theme change button"
+            document.getElementById("themer").addEventListener("click", () => {
+                changeTheme(document.getElementById("darkTheme").disabled ? "dark" : "light");
+            });
+        }
+    };
+</script>
+{{- end }}
