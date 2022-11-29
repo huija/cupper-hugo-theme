@@ -37,6 +37,11 @@ params:
   customJs:
     - js/custom_01.js
     - js/custom_02.js
+  utterances:
+    owner:
+    repo:
+    issueTerm: title
+    theme: github-light
 
 menu:
   nav:
