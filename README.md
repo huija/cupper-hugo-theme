@@ -128,20 +128,21 @@ To reset to a 'first visit' scenario (e.g. for testing), one needs to either bro
 
 Check your browser's help or documentation for details.
 
-## utterances enable
+## utterances
+
+`utterances` is a lightweight comments widget built on GitHub issues.
 
 Firstly,Choose the repository utterances will connect to.
 1. Make sure the repo is public, otherwise your readers will not be able to view the issues/comments.
 2. Make sure the [utterances app](https://github.com/apps/utterances) is installed on the repo, otherwise users will not be able to post comments.
 3. If your repo is a fork, navigate to its settings tab and confirm the issues feature is turned on.
 
-Secondly,In the site config file set the param `utterances.owner` & `utterances.repo` to enable it.
+Secondly,In the site config file set the param `utterances.repo` to enable it.
 
 E.g. for `config.yaml`
 ```yaml
   utterances:
-    owner: zwbetz-gh
-    repo: zwbetz-gh.github.io
+    repo: zwbetz-gh/zwbetz-gh.github.io
     issueTerm: title
     theme: github-light
 ```
