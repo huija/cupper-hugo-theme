@@ -128,7 +128,7 @@ To reset to a 'first visit' scenario (e.g. for testing), one needs to either bro
 
 Check your browser's help or documentation for details.
 
-## utterances
+## Enable utterances
 
 `utterances` is a lightweight comments widget built on GitHub issues.
 
