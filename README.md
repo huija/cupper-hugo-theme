@@ -22,6 +22,7 @@ An accessibility-friendly Hugo theme, ported from the [original Cupper](https://
 - [Localization](#localization)
 - [Custom CSS and JS](#custom-css-and-js)
 - [Default to Dark Theme](#default-to-dark-theme)
+- [Enable utterances](#enable-utterances)
 - [Non-Git Repo](#non-git-repo)
 - [Getting help](#getting-help)
 - [Credits](#credits)
@@ -132,7 +133,7 @@ Check your browser's help or documentation for details.
 
 `utterances` is a lightweight comments widget built on GitHub issues.
 
-Firstly,Choose the repository utterances will connect to.
+Firstly, choose the repository utterances will connect to:
 1. Make sure the repo is public, otherwise your readers will not be able to view the issues/comments.
 2. Make sure the [utterances app](https://github.com/apps/utterances) is installed on the repo, otherwise users will not be able to post comments.
 3. If your repo is a fork, navigate to its settings tab and confirm the issues feature is turned on.
