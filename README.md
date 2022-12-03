@@ -142,8 +142,9 @@ Secondly,In the site config file set the param `utterances.repo` to enable it.
 
 E.g. for `config.yaml`
 ```yaml
+params:
   utterances:
-    repo: zwbetz-gh/zwbetz-gh.github.io
+    repo: username/username.github.io
     issueTerm: title
     theme: github-light
 ```
